@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:dangote-group.com:ng:isop:postdownpayment" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="si_bank_abs_syc_v2" targetNamespace="urn:dangote-group.com:ng:isop:postdownpayment" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_si_bank_abs_syc_v2" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:dangote-group.com:ng:isop:postdownpayment" targetNamespace="urn:dangote-group.com:ng:isop:postdownpayment" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="mt_bank_in" type="p1:dt_bank_in" />
+      <xsd:element name="mt_bank_out" type="p1:dt_bank_out" />
+      <xsd:complexType name="dt_bank_in">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">43f22adcaa1e11e5ccb600000082b77a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="access_token" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">d907afb060e711e5c51f00155d1e0b3d</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="comp_code" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">03875c58468411e5b7cb00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="plant" type="xsd:string" />
+          <xsd:element minOccurs="0" name="bankn" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">03875c59468411e5b93b00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="cust_number" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">03875c5a468411e5bb3b00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="amount" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">03875c5b468411e5cac800155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="teller_no" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">03875c5c468411e59a8500155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="tran_id" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">03875c5d468411e5a24a00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="currency" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">0387773d468411e59a1c00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="dt_bank_out">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">297ddd9878b211e5c63500000082b77a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ERROR">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">81a776fe46e211e5ba9400155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="lines">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">81a776fd46e211e59da600155d1e0b1e</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="code" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">81a776fa46e211e5c82300155d1e0b1e</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="title" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">81a776fb46e211e5c3fc00155d1e0b1e</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="msg" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">81a776fc46e211e5c10d00155d1e0b1e</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="output_string1" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">3590cbd946e211e5936e00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="output_string2" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">3590cbda46e211e5a76f00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="DocNum" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">454fbc115b8111e59d5800155d1e0b3d</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="trans_id" type="xsd:string" />
+          <xsd:element minOccurs="0" name="CompCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">454fbc125b8111e5bcf100155d1e0b3d</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="FiscalYr" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">454ff2755b8111e5907e00155d1e0b3d</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="AccessToken" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">77c9c5d571fa11e5a2d500155d1e0b69</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="mt_bank_in">
+    <wsdl:documentation />
+    <wsdl:part name="mt_bank_in" element="p1:mt_bank_in" />
+  </wsdl:message>
+  <wsdl:message name="mt_bank_out">
+    <wsdl:documentation />
+    <wsdl:part name="mt_bank_out" element="p1:mt_bank_out" />
+  </wsdl:message>
+  <wsdl:portType name="si_bank_abs_syc_v2">
+    <wsdl:documentation />
+    <wsdl:operation name="si_bank_abs_syc_v2">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_si_bank_abs_syc_v2" />
+      </wsp:Policy>
+      <wsdl:input message="p1:mt_bank_in" />
+      <wsdl:output message="p1:mt_bank_out" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="si_bank_abs_syc_v2Binding" type="p1:si_bank_abs_syc_v2">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="si_bank_abs_syc_v2">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="si_bank_abs_syc_v2Service">
+    <wsdl:port name="HTTP_Port" binding="p1:si_bank_abs_syc_v2Binding">
+      <address location="http://sappidev2.dangote-group.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=ISOP_Dp&amp;receiverParty=&amp;receiverService=&amp;interface=si_bank_abs_syc_v2&amp;interfaceNamespace=urn%3Adangote-group.com%3Ang%3Aisop%3Apostdownpayment" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:si_bank_abs_syc_v2Binding">
+      <address location="https://sappidev2.dangote-group.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=ISOP_Dp&amp;receiverParty=&amp;receiverService=&amp;interface=si_bank_abs_syc_v2&amp;interfaceNamespace=urn%3Adangote-group.com%3Ang%3Aisop%3Apostdownpayment" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

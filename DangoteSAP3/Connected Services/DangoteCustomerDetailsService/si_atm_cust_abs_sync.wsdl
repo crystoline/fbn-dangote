@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:dangote-group.com:ng:isop:postatctransaction" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="si_atm_cust_abs_sync" targetNamespace="urn:dangote-group.com:ng:isop:postatctransaction" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_si_atm_cust_abs_sync" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:dangote-group.com:ng:isop:postatctransaction" targetNamespace="urn:dangote-group.com:ng:isop:postatctransaction" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="mt_atm_cust_in" type="p1:dt_atm_cust_in" />
+      <xsd:element name="mt_atm_cust_out" type="p1:dt_atm_cust_out" />
+      <xsd:complexType name="dt_atm_cust_in">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">83aa9c87592511eacd46000000877076</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="comp_code" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">ab6fcdef49fa11e5c3ce00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="cust_num" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">ab6fcdf049fa11e5842200155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="cc_area" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">ab6fcdf149fa11e5a82400155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="sales_org" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">ab70115949fa11e5aa2000155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="export" type="xsd:string" />
+          <xsd:element minOccurs="0" name="access_token" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">ac2a11dbb98911e99e07000d3a299308</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="dt_atm_cust_out">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">8a26bf8272ef11e5a0f500000082b77a</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="cust_name" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">a1e3e5664a1111e5898a00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="address" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">a1e3e5674a1111e58cb200155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="country" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">a1e3e5684a1111e5962300155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="region" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">a1e3e5694a1111e5b50700155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="exposure" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">a1e3e56a4a1111e5cb7c00155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="division" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">a1e3e56b4a1111e5b26500155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="error_log">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">17ce06f94a1211e5c8c700155d1e0b1e</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="lines">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">17ce06f84a1211e58d4400155d1e0b1e</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element minOccurs="0" name="code" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">17cde26f4a1211e5cbca00155d1e0b1e</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="title" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">17cde2704a1211e5bc1c00155d1e0b1e</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element minOccurs="0" name="message" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">17cde2714a1211e5a7dd00155d1e0b1e</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="access_token" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="mt_atm_cust_in">
+    <wsdl:documentation />
+    <wsdl:part name="mt_atm_cust_in" element="p1:mt_atm_cust_in" />
+  </wsdl:message>
+  <wsdl:message name="mt_atm_cust_out">
+    <wsdl:documentation />
+    <wsdl:part name="mt_atm_cust_out" element="p1:mt_atm_cust_out" />
+  </wsdl:message>
+  <wsdl:portType name="si_atm_cust_abs_sync">
+    <wsdl:documentation />
+    <wsdl:operation name="si_atm_cust_abs_sync">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_si_atm_cust_abs_sync" />
+      </wsp:Policy>
+      <wsdl:input message="p1:mt_atm_cust_in" />
+      <wsdl:output message="p1:mt_atm_cust_out" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="si_atm_cust_abs_syncBinding" type="p1:si_atm_cust_abs_sync">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="si_atm_cust_abs_sync">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="si_atm_cust_abs_syncService">
+    <wsdl:port name="HTTP_Port" binding="p1:si_atm_cust_abs_syncBinding">
+      <address location="http://sappidev2.dangote-group.com:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_ATC&amp;receiverParty=&amp;receiverService=&amp;interface=si_atm_cust_abs_sync&amp;interfaceNamespace=urn%3Adangote-group.com%3Ang%3Aisop%3Apostatctransaction" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:si_atm_cust_abs_syncBinding">
+      <address location="https://sappidev2.dangote-group.com:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_ATC&amp;receiverParty=&amp;receiverService=&amp;interface=si_atm_cust_abs_sync&amp;interfaceNamespace=urn%3Adangote-group.com%3Ang%3Aisop%3Apostatctransaction" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
