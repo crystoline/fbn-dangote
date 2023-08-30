@@ -1,0 +1,2 @@
+DangoteSAP3/bin
+DangoteSAP3/obj
